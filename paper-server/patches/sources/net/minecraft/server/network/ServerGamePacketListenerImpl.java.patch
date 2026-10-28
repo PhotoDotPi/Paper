@@ -1305,7 +1305,7 @@
 +                    return;
 +                }
 +                // CraftBukkit end
-                 if (this.player.gameMode.useItem(this.player, level, itemStack, hand) instanceof InteractionResult.Success success && success.shouldSwing()) {
+                 if (this.player.gameMode.useItem(this.player, level, itemStack, hand) instanceof InteractionResult.Success success && success.shouldSwing() && !this.player.gameMode.interactResult) {
                      this.player.swingAndResetAttackStrength(hand, swingAnimation, success.swingSource() != InteractionResult.SwingSource.PREDICTED);
                  }
 @@ -1513,7 +_,7 @@
