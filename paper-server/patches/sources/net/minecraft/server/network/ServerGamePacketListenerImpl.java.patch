@@ -1218,7 +1218,7 @@
                                      && wasBlockPlacementAttempt(this.player, itemStack)) {
                                      this.player.sendBuildLimitMessage(true, maxY);
 -                                } else if (interactionResult instanceof InteractionResult.Success success && success.shouldSwing()) {
-+                                } else if (interactionResult instanceof InteractionResult.Success success && success.shouldSwing() && !this.player.gameMode.interactResult) { // Paper - Call interact event
++                                } else if (interactionResult instanceof InteractionResult.Success success && success.shouldSwing()) { // Paper - Call interact event
                                      this.player
                                          .swingAndResetAttackStrength(hand, swingAnimation, success.swingSource() != InteractionResult.SwingSource.PREDICTED);
                                  }
